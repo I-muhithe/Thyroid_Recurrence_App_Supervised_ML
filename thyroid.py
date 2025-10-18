@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 
 ##model = joblib.load('C:/Users/User/Dropbox/Engage revised materials/model/weigth_model.pkl')
-model = joblib.load("C:\ENGAGE\Supervised_ML_Logistic_Regression_Model_ReccurenceLikelihood.joblib")
+model = joblib.load("Supervised_ML_Logistic_Regression_Model_ReccurenceLikelihood.joblib")
 st.title('Thyroid Occurence Prediction App')
 st.write("This app predicts the likelihood of thyroid recurrence based on clinical features and patient demographics.")
 ##age = st.number_input('Age', min_value=0.0, max_value=100.0, value=6.0)
@@ -40,4 +40,5 @@ if st.button('Predict'):
     prediction = model.predict(input_features)
 
     # Display prediction
+
     st.write(f'Predicted Recurrence: {prediction[0]:.2f}')
